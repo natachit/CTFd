@@ -27,6 +27,11 @@ if not os.environ.get('SECRET_KEY'):
 
 
 class Config(object):
+    
+    ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+    SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+    BUCKET = 'ctfd-s3'
+
     '''
     SECRET_KEY is the secret value used to creation sessions and sign strings. This should be set to a random string. In the
     interest of ease, CTFd will automatically create a secret key file for you. If you wish to add this secret key to
